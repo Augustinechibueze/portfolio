@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Apply the saved theme before first paint. Default is light. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || savedTheme === 'light') root.setAttribute('data-theme', savedTheme);
+        if (sessionStorage.getItem('preloaderSeen') === '1') root.classList.add('skip-preloader');
+      } catch (error) { /* storage unavailable, keep defaults */ }
+    })();
+  </script>
+
+  <title>Augustine Chibueze | Software Engineer and Founder</title>
+  <meta name="description" content="Portfolio of Augustine Chibueze, a software engineer and founder from Enugu, Nigeria, building Cloudpen, MediaLens, Reedmi and MyAutoApplier. Computer Science student at Miva Open University.">
+  <meta name="author" content="Augustine Chibueze">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://augustine.cloudpen.dev/">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Augustine Chibueze">
+  <meta property="og:title" content="Augustine Chibueze | Software Engineer and Founder">
+  <meta property="og:description" content="Portfolio of Augustine Chibueze, a software engineer and founder from Enugu, Nigeria, building Cloudpen, MediaLens, Reedmi and MyAutoApplier. Computer Science student at Miva Open University.">
+  <meta property="og:url" content="https://augustine.cloudpen.dev/">
+  <meta property="og:image" content="https://augustine.cloudpen.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Augustine Chibueze",
+      "jobTitle": "Software Engineer and Founder",
+      "url": "https://augustine.cloudpen.dev/",
+      "image": "https://augustine.cloudpen.dev/og-image.png",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Miva Open University" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Enugu", "addressCountry": "NG" },
+      "knowsAbout": ["Laravel", "React", "Next.js", "Python", "Cloud IDEs", "SaaS"]
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="is-locked">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- Preloader (plays once per browser session) -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__top">
+      <span>Portfolio</span>
+      <span>Enugu, Nigeria</span>
+    </div>
+
+    <div class="preloader__timeline" id="preloaderTimeline">
+      <div class="preloader__item"><span>Founder, Cloudpen</span><span>2026 to Now</span></div>
+      <div class="preloader__item"><span>Software Developer, NetSprin</span><span>Jan 2025 to Jul 2026</span></div>
+      <div class="preloader__item"><span>Fullstack Developer, DeGoodDev</span><span>Oct 2024 to Jan 2025</span></div>
+      <div class="preloader__item"><span>Web Tutor, Digital Dreams Limited</span><span>Feb 2021 to Oct 2023</span></div>
+    </div>
+
+    <div class="preloader__bottom">
+      <div class="preloader__headline">
+        <div class="preloader__name"><span>Augustine Chibueze</span></div>
+        <div class="preloader__counter" id="preloaderCounter">0</div>
+      </div>
+      <div class="preloader__bar"><i class="preloader__bar-fill" id="preloaderBarFill"></i></div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Augustine, home">Augustine.</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="planner.html">Planner</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun icon-sun"></i><i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+        <a href="contact.html" class="button button--primary">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <!-- Hero: name, photograph and welcome message -->
+    <section class="hero" data-guide-lines aria-labelledby="homeTitle">
+      <div class="container">
+        <div class="hero__grid">
+          <div data-parallax-speed="-0.08">
+            <div class="status-badge reveal"><i class="fa-solid fa-circle"></i>Open to senior engineering roles</div>
+            <span class="hero__name reveal">Hi, I'm Augustine Chibueze</span>
+            <h1 class="hero__title" id="homeTitle">I build fast, reliable software for the Web &amp; Cloud.</h1>
+            <p class="hero__lead reveal">Welcome to my portfolio! I am a software engineer, founder and Computer Science student at Miva Open University. Take a look around to see what I have built and how I work.</p>
+            <div class="hero__actions reveal">
+              <a href="projects.html" class="button button--primary">View my work <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="contact.html" class="button button--ghost"><i class="fa-solid fa-comment-dots"></i> Let's talk</a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <figure class="portrait reveal">
+              <img data-parallax-speed="-0.1" data-parallax-scale="1.2" src="assets/logos/hero.jpg" alt="Photograph of Augustine Chibueze working on his laptop" width="400" height="400">
+            </figure>
+            <div class="floating-card" data-parallax-speed="-0.12">
+              <i class="fa-solid fa-code"></i>
+              <span><b>Building Cloudpen</b>A cloud IDE for the browser</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Laravel<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">React<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Python<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Next.js<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Docker<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">WebSockets<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Cloudflare<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Cloud IDEs<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">AI Systems<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Multi tenant SaaS<i class="fa-solid fa-asterisk"></i></span>
+        <span class="marquee__item">Laravel<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">React<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Python<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Next.js<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Docker<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">WebSockets<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Cloudflare<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Cloud IDEs<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">AI Systems<i class="fa-solid fa-asterisk"></i></span><span class="marquee__item">Multi tenant SaaS<i class="fa-solid fa-asterisk"></i></span>
+      </div>
+    </div>
+
+    <!-- Brief biography -->
+    <section id="bio" data-guide-lines aria-labelledby="bioTitle">
+      <div class="container about__grid">
+        <div>
+          <div class="eyebrow reveal"><i class="fa-regular fa-user"></i>Biography</div>
+          <h2 class="section-title reveal" id="bioTitle">A little about me.</h2>
+        </div>
+        <div class="about__content reveal">
+          <p>I am a software engineer and founder based in <b>Enugu, Nigeria</b>. I design and ship products from the database to the interface, mostly with <b>Laravel, React and Next.js</b>, and I am studying for a BSc in Computer Science at Miva Open University.</p>
+          <p>I am currently building Cloudpen, MediaLens, Reedmi and MyAutoApplier, and I have taught web development to more than a hundred students along the way.</p>
+
+          <dl class="fact-list">
+            <div><dt>Location</dt><dd>Enugu, Nigeria</dd></div>
+            <div><dt>Studying</dt><dd>BSc Computer Science, Miva Open University</dd></div>
+            <div><dt>Focus</dt><dd>Full stack web and cloud</dd></div>
+            <div><dt>Building</dt><dd>Cloudpen, MediaLens, Reedmi</dd></div>
+          </dl>
+
+          <div class="button-row" style="margin-top:30px">
+            <a href="about.html" class="button button--primary">More about me <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- By the numbers -->
+    <section class="stats-section" id="numbers" aria-labelledby="numbersTitle">
+      <div class="container">
+        <div class="eyebrow reveal" id="numbersTitle"><i class="fa-solid fa-chart-simple"></i>By the numbers</div>
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <b class="stat-card__value" data-count-to="5" data-count-suffix="+">5+</b>
+            <span class="stat-card__label">Years building for the web</span>
+            <p class="stat-card__note">Shipping production software since 2021</p>
+          </div>
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-rocket"></i>
+            <b class="stat-card__value" data-count-to="4" data-count-suffix="">4</b>
+            <span class="stat-card__label">Products shipped</span>
+            <p class="stat-card__note">Cloudpen, MediaLens, Reedmi and MyAutoApplier</p>
+          </div>
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-building"></i>
+            <b class="stat-card__value" data-count-to="4" data-count-suffix="">4</b>
+            <span class="stat-card__label">Teams worked with</span>
+            <p class="stat-card__note">Startups, agencies and training centres</p>
+          </div>
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <b class="stat-card__value" data-count-to="100" data-count-suffix="+">100+</b>
+            <span class="stat-card__label">Students taught</span>
+            <p class="stat-card__note">Hands on web development training</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="principles" aria-labelledby="principlesTitle">
+      <div class="container">
+        <div class="eyebrow reveal">My approach</div>
+        <h2 class="section-title reveal" id="principlesTitle">Turning complex problems into simple products.</h2>
+
+        <div class="principles__grid">
+          <article class="principle-card reveal">
+            <span class="principle-card__number">01</span>
+            <h3 class="principle-card__title">Start from the data</h3>
+            <p class="principle-card__text">Get the schema and the API contract right first. Every screen gets simpler when the foundation is clear.</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-card__number">02</span>
+            <h3 class="principle-card__title">Ship small, ship often</h3>
+            <p class="principle-card__text">Small releases get real feedback sooner and keep risk low, so the product improves every week.</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-card__number">03</span>
+            <h3 class="principle-card__title">Own it in production</h3>
+            <p class="principle-card__text">Containers, monitoring and clean deploys are part of the job. Software is only done when it runs reliably.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore the site -->
+    <section data-guide-lines aria-labelledby="exploreTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-compass"></i>Explore</div>
+        <h2 class="section-title reveal" id="exploreTitle">Where to next?</h2>
+
+        <ul class="explore-grid">
+          <li class="reveal"><a class="explore-card" href="about.html"><i class="fa-regular fa-user"></i><h3>About</h3><p>Education, skills, experience and what I enjoy outside of code.</p><span class="explore-card__go">Read more <i class="fa-solid fa-arrow-right"></i></span></a></li>
+          <li class="reveal"><a class="explore-card" href="projects.html"><i class="fa-solid fa-cube"></i><h3>Projects</h3><p>The products I have designed, built and shipped.</p><span class="explore-card__go">See my work <i class="fa-solid fa-arrow-right"></i></span></a></li>
+          <li class="reveal"><a class="explore-card" href="planner.html"><i class="fa-solid fa-list-check"></i><h3>Planner</h3><p>An interactive academic planner to add, finish and delete tasks.</p><span class="explore-card__go">Try it <i class="fa-solid fa-arrow-right"></i></span></a></li>
+          <li class="reveal"><a class="explore-card" href="contact.html"><i class="fa-regular fa-envelope"></i><h3>Contact</h3><p>Have a role or a product in mind? Send me a message.</p><span class="explore-card__go">Get in touch <i class="fa-solid fa-arrow-right"></i></span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 class="section-title">Let's build something great.</h2>
+          <a href="contact.html" class="button">Start a conversation <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <h3 class="site-footer__title">Software built with care.</h3>
+        <div class="social-links">
+          <a href="https://github.com/Augustinechibueze" target="_blank" rel="noopener" aria-label="GitHub" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/augustinechibueze/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link" style="--social-color:#0a66c2"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/Augustine7850" target="_blank" rel="noopener" aria-label="X" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/augustine_chibueze" target="_blank" rel="noopener" aria-label="Instagram" class="social-link" style="--social-color:#e4405f"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/cloudpenide" target="_blank" rel="noopener" aria-label="YouTube" class="social-link" style="--social-color:#ff0000"><i class="fa-brands fa-youtube"></i></a>
+          <a href="mailto:augustinedevv@gmail.com" aria-label="Email" class="social-link" style="--social-color:#ea4335"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Augustine Chibueze. All rights reserved.</span>
+        <span>Computer Science, Miva Open University</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- Reedmi Chat Widget -->
+  <script src="https://backend.reedmi.com/widget/settings" data-widget-key="91e75f10-17d4-4d6a-9b1e-2aee4d558331"></script>
+  <noscript>
+      <div style="padding: 15px; background: #f5f5f5; border-radius: 8px; max-width: 280px;">
+          <p style="margin: 0; color: #666; font-size: 14px;">
+              JavaScript is required for live chat.
+              <a href="mailto:support@reedmi.com" style="color: #0066cc;">Email us instead</a>
+          </p>
+      </div>
+  </noscript>
+  <!-- end code for Reedmi Chat Widget -->
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Apply the saved theme before first paint. Default is light. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || savedTheme === 'light') root.setAttribute('data-theme', savedTheme);
+        if (sessionStorage.getItem('preloaderSeen') === '1') root.classList.add('skip-preloader');
+      } catch (error) { /* storage unavailable, keep defaults */ }
+    })();
+  </script>
+
+  <title>Contact | Augustine Chibueze</title>
+  <meta name="description" content="Get in touch with Augustine Chibueze about a senior engineering role, a freelance project or a product collaboration.">
+  <meta name="author" content="Augustine Chibueze">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://augustine.cloudpen.dev/contact.html">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Augustine Chibueze">
+  <meta property="og:title" content="Contact | Augustine Chibueze">
+  <meta property="og:description" content="Get in touch with Augustine Chibueze about a senior engineering role, a freelance project or a product collaboration.">
+  <meta property="og:url" content="https://augustine.cloudpen.dev/contact.html">
+  <meta property="og:image" content="https://augustine.cloudpen.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Augustine, home">Augustine.</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="planner.html">Planner</a><a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun icon-sun"></i><i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+        <a href="contact.html" class="button button--primary">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+
+  <main id="main">
+    <header class="page-hero" data-guide-lines>
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-regular fa-envelope"></i>Contact</div>
+        <h1 class="page-hero__title reveal">Let's talk about what you are building.</h1>
+        <p class="page-hero__lead reveal">Hiring for a senior role or have a product in mind? Send a message and I will reply within a day.</p>
+      </div>
+    </header>
+
+    <section data-guide-lines aria-label="Contact form">
+      <div class="container">
+        <div class="contact-card contact-card--page reveal">
+          <div>
+            <h2 class="section-title">Say hello.</h2>
+            <p class="contact-card__text">Fill in the form and I will get back to you. Every field is required.</p>
+
+            <ul class="contact-details">
+              <li><i class="fa-regular fa-envelope"></i><span><small>Email</small><a href="mailto:augustinedevv@gmail.com">augustinedevv@gmail.com</a></span></li>
+              <li><i class="fa-solid fa-location-dot"></i><span><small>Based in</small>Enugu, Nigeria</span></li>
+              <li><i class="fa-regular fa-clock"></i><span><small>Response time</small>Within a day</span></li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="contactName">Name</label>
+              <input class="form-field" id="contactName" name="name" type="text" placeholder="Your full name" autocomplete="name" aria-describedby="contactNameError">
+              <p class="field-error" id="contactNameError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="contactEmail">Email address</label>
+              <input class="form-field" id="contactEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="contactEmailError">
+              <p class="field-error" id="contactEmailError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="contactPhone">Phone number</label>
+              <input class="form-field" id="contactPhone" name="phone" type="tel" inputmode="numeric" placeholder="08012345678" autocomplete="tel" aria-describedby="contactPhoneHint contactPhoneError">
+              <span class="field-hint" id="contactPhoneHint">Digits only, no spaces or + sign.</span>
+              <p class="field-error" id="contactPhoneError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="contactMessage">Message</label>
+              <textarea class="form-field" id="contactMessage" name="message" placeholder="Tell me about your role or project" aria-describedby="contactMessageError"></textarea>
+              <p class="field-error" id="contactMessageError" role="alert"></p>
+            </div>
+
+            <button class="button form-submit" type="submit">Send message <i class="fa-solid fa-paper-plane"></i></button>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <h3 class="site-footer__title">Software built with care.</h3>
+        <div class="social-links">
+          <a href="https://github.com/Augustinechibueze" target="_blank" rel="noopener" aria-label="GitHub" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/augustinechibueze/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link" style="--social-color:#0a66c2"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/Augustine7850" target="_blank" rel="noopener" aria-label="X" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/augustine_chibueze" target="_blank" rel="noopener" aria-label="Instagram" class="social-link" style="--social-color:#e4405f"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/cloudpenide" target="_blank" rel="noopener" aria-label="YouTube" class="social-link" style="--social-color:#ff0000"><i class="fa-brands fa-youtube"></i></a>
+          <a href="mailto:augustinedevv@gmail.com" aria-label="Email" class="social-link" style="--social-color:#ea4335"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Augustine Chibueze. All rights reserved.</span>
+        <span>Computer Science, Miva Open University</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+
+  <!-- Reedmi Chat Widget -->
+  <script src="https://backend.reedmi.com/widget/settings" data-widget-key="91e75f10-17d4-4d6a-9b1e-2aee4d558331"></script>
+  <noscript>
+      <div style="padding: 15px; background: #f5f5f5; border-radius: 8px; max-width: 280px;">
+          <p style="margin: 0; color: #666; font-size: 14px;">
+              JavaScript is required for live chat.
+              <a href="mailto:support@reedmi.com" style="color: #0066cc;">Email us instead</a>
+          </p>
+      </div>
+  </noscript>
+  <!-- end code for Reedmi Chat Widget -->
+
+</body>
+
+</html>

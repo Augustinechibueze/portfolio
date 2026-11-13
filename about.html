@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Apply the saved theme before first paint. Default is light. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || savedTheme === 'light') root.setAttribute('data-theme', savedTheme);
+        if (sessionStorage.getItem('preloaderSeen') === '1') root.classList.add('skip-preloader');
+      } catch (error) { /* storage unavailable, keep defaults */ }
+    })();
+  </script>
+
+  <title>About | Augustine Chibueze</title>
+  <meta name="description" content="Education, career aspirations, technical skills, experience and hobbies of Augustine Chibueze, a software engineer and Computer Science student from Enugu, Nigeria.">
+  <meta name="author" content="Augustine Chibueze">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://augustine.cloudpen.dev/about.html">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Augustine Chibueze">
+  <meta property="og:title" content="About | Augustine Chibueze">
+  <meta property="og:description" content="Education, career aspirations, technical skills, experience and hobbies of Augustine Chibueze, a software engineer and Computer Science student from Enugu, Nigeria.">
+  <meta property="og:url" content="https://augustine.cloudpen.dev/about.html">
+  <meta property="og:image" content="https://augustine.cloudpen.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Augustine, home">Augustine.</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="planner.html">Planner</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun icon-sun"></i><i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+        <a href="contact.html" class="button button--primary">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <header class="page-hero" data-guide-lines>
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-regular fa-user"></i>About me</div>
+        <h1 class="page-hero__title reveal">Engineer by craft, student by choice.</h1>
+        <p class="page-hero__lead reveal">My background, what I am working towards, the tools I use and what keeps me busy away from the keyboard.</p>
+      </div>
+    </header>
+
+    <section aria-label="Introduction">
+      <div class="container about-intro">
+        <figure class="about-intro__photo reveal">
+          <img src="assets/logos/hero.jpg" alt="Augustine Chibueze at his desk with a laptop" width="400" height="400">
+        </figure>
+        <div class="reveal">
+          <p>I write software the way I would want to maintain it: clear, tested and built to scale. My core stack is <b>Laravel, PHP, React and Next.js</b>, backed by Docker, WebSockets, Cloudflare and OAuth.</p>
+          <p>I have built <b>multi tenant SaaS products</b>, a cloud IDE that runs in the browser, and tools used by real teams. I also teach web development, which sharpened how I explain and structure complex systems.</p>
+          <ul class="about__highlights">
+            <li><i class="fa-solid fa-server"></i>Back end systems and APIs</li>
+            <li><i class="fa-brands fa-python"></i>AI and Python services</li>
+            <li><i class="fa-solid fa-palette"></i>Polished, responsive interfaces</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational background -->
+    <section id="education" data-guide-lines aria-labelledby="educationTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-graduation-cap"></i>Educational background</div>
+        <h2 class="section-title section-title--wide reveal" id="educationTitle">Learning in the classroom and in production.</h2>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <small>Degree</small>
+            <h3><i class="fa-solid fa-graduation-cap"></i>BSc Computer Science</h3>
+            <p>Miva Open University, currently enrolled.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i>Programming and problem solving</li>
+              <li><i class="fa-solid fa-check"></i>Computer science fundamentals</li>
+              <li><i class="fa-solid fa-check"></i>Web development coursework</li>
+            </ul>
+          </article>
+          <article class="education-card reveal">
+            <small>Hands on</small>
+            <h3><i class="fa-solid fa-laptop-code"></i>Learning by shipping</h3>
+            <p>Most of what I know came from building real things.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i>Built and launched four products</li>
+              <li><i class="fa-solid fa-check"></i>Taught web development at Digital Dreams Limited</li>
+              <li><i class="fa-solid fa-check"></i>Published a VS Code extension</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career aspirations -->
+    <section id="aspirations" data-guide-lines aria-labelledby="aspirationsTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-bullseye"></i>Career aspirations</div>
+        <h2 class="section-title section-title--wide reveal" id="aspirationsTitle">Where I want to take my career.</h2>
+
+        <ol class="goal-list">
+          <li class="reveal"><div class="goal-card"><span class="goal-card__number">01</span><h3>Grow my products</h3><p>Take Cloudpen, MediaLens, Reedmi and MyAutoApplier from early products to businesses with real customers.</p></div></li>
+          <li class="reveal"><div class="goal-card"><span class="goal-card__number">02</span><h3>Join a strong engineering team</h3><p>Work in a senior engineering role, remote or relocating for the right team, on hard problems alongside experienced people.</p></div></li>
+          <li class="reveal"><div class="goal-card"><span class="goal-card__number">03</span><h3>Keep teaching</h3><p>Keep sharing what I learn through mentoring, tutorials and open tools for other developers.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Technical skills -->
+    <section id="stack" data-guide-lines aria-labelledby="stackTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-layer-group"></i>Technical skills</div>
+        <h2 class="section-title reveal" id="stackTitle">Tools I trust in production.</h2>
+
+        <div class="stack-grid">
+          <article class="stack-card reveal">
+            <header class="stack-card__header">
+              <span class="stack-card__icon"><i class="fa-solid fa-server"></i></span>
+              <div>
+                <h3 class="stack-card__title">Back end</h3>
+                <p class="stack-card__description">APIs, auth and realtime services.</p>
+              </div>
+            </header>
+            <ul class="stack-list">
+              <li class="stack-item"><i class="stack-item__icon fa-brands fa-laravel" style="--brand-color:#ff2d20"></i>Laravel</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-php" style="--brand-color:#777bb4"></i>PHP</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-node-js" style="--brand-color:#5fa04e"></i>Node.js</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-database" style="--brand-color:#00758f"></i>MySQL</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-plug" style="--brand-color:#0ea5e9"></i>REST APIs</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-tower-broadcast" style="--brand-color:#e8573a"></i>WebSockets</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-key" style="--brand-color:#6366f1"></i>OAuth</li>
+            </ul>
+          </article>
+
+          <article class="stack-card reveal">
+            <header class="stack-card__header">
+              <span class="stack-card__icon"><i class="fa-solid fa-window-maximize"></i></span>
+              <div>
+                <h3 class="stack-card__title">Front end</h3>
+                <p class="stack-card__description">Fast, accessible interfaces.</p>
+              </div>
+            </header>
+            <ul class="stack-list">
+              <li class="stack-item"><i class="stack-item__icon fa-brands fa-react" style="--brand-color:#61dafb"></i>React</li><li class="stack-item"><span class="stack-item__icon stack-item__icon--text" style="--brand-color:currentColor">N</span>Next.js</li><li class="stack-item"><span class="stack-item__icon stack-item__icon--text" style="--brand-color:#3178c6">TS</span>TypeScript</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-js" style="--brand-color:#d4b200"></i>JavaScript</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-css3-alt" style="--brand-color:#06b6d4"></i>Tailwind CSS</li>
+            </ul>
+          </article>
+
+          <article class="stack-card reveal">
+            <header class="stack-card__header">
+              <span class="stack-card__icon"><i class="fa-solid fa-cloud"></i></span>
+              <div>
+                <h3 class="stack-card__title">Infrastructure</h3>
+                <p class="stack-card__description">Shipping and running it all.</p>
+              </div>
+            </header>
+            <ul class="stack-list">
+              <li class="stack-item"><i class="stack-item__icon fa-brands fa-docker" style="--brand-color:#2496ed"></i>Docker</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-cloudflare" style="--brand-color:#f38020"></i>Cloudflare</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-linux" style="--brand-color:#d99a00"></i>Linux</li><li class="stack-item"><i class="stack-item__icon fa-brands fa-git-alt" style="--brand-color:#f05032"></i>Git</li>
+            </ul>
+          </article>
+
+          <article class="stack-card reveal">
+            <header class="stack-card__header">
+              <span class="stack-card__icon"><i class="fa-solid fa-microchip"></i></span>
+              <div>
+                <h3 class="stack-card__title">AI and data</h3>
+                <p class="stack-card__description">Python services behind the models.</p>
+              </div>
+            </header>
+            <ul class="stack-list">
+              <li class="stack-item"><i class="stack-item__icon fa-brands fa-python" style="--brand-color:#3776ab"></i>Python</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-bolt" style="--brand-color:#009688"></i>FastAPI</li><li class="stack-item"><i class="stack-item__icon fa-solid fa-diagram-project" style="--brand-color:#8b5cf6"></i>ML services</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" data-guide-lines aria-labelledby="experienceTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-briefcase"></i>Experience</div>
+        <h2 class="section-title reveal" id="experienceTitle">Where I have worked.</h2>
+
+        <div class="experience-list">
+          <article class="experience-item reveal">
+            <div class="experience-item__period">2026 to Now</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="CP">
+                  <img src="assets/logos/cloudpen.png" alt="Cloudpen logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Founder and Engineer</h3>
+                  <div class="experience-item__company">Cloudpen</div>
+                </div>
+              </div>
+              <p class="experience-item__description">Building a cloud IDE that runs in the browser, with containers, realtime collaboration and a partner program.</p>
+            </div>
+            <span class="experience-item__type">Remote</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-item__period">2026 to Now</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="RM">
+                  <img src="assets/logos/reedmi.svg" alt="Reedmi logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Cofounder</h3>
+                  <div class="experience-item__company">Reedmi</div>
+                </div>
+              </div>
+              <p class="experience-item__description">A customer experience and live chat SaaS, built multi tenant from day one.</p>
+            </div>
+            <span class="experience-item__type">SaaS</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-item__period">2026 to Now</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="ML">
+                  <img src="assets/logos/medialens.jpg" alt="MediaLens logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Founder and Engineer</h3>
+                  <div class="experience-item__company">MediaLens</div>
+                </div>
+              </div>
+              <p class="experience-item__description">An AI powered media forensics platform built with Python and ML services.</p>
+            </div>
+            <span class="experience-item__type">AI platform</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-item__period">Jan 2025 to Jul 2026</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="NS">
+                  <img src="assets/logos/netsprin.png" alt="NetSprin logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Software Developer</h3>
+                  <div class="experience-item__company">NetSprin</div>
+                </div>
+              </div>
+              <p class="experience-item__description">Delivered back end services and front end interfaces for production applications on a full time, on site team.</p>
+            </div>
+            <span class="experience-item__type">Full time</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-item__period">Oct 2024 to Jan 2025</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="DG">
+                  <img src="assets/logos/degooddev.svg" alt="DeGoodDev logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Fullstack Developer</h3>
+                  <div class="experience-item__company">DeGoodDev, Enugu</div>
+                </div>
+              </div>
+              <p class="experience-item__description">Built and shipped full stack features across web products for client projects.</p>
+            </div>
+            <span class="experience-item__type">Full time</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-item__period">Feb 2021 to Oct 2023</div>
+            <div class="experience-item__body">
+              <div class="experience-item__header">
+                <div class="experience-item__logo" data-initials="DD">
+                  <img src="assets/logos/digital-dreams.jpg" alt="Digital Dreams Limited logo" width="56" height="56" loading="lazy">
+                </div>
+                <div>
+                  <h3 class="experience-item__role">Web Tutor</h3>
+                  <div class="experience-item__company">Digital Dreams Limited, Enugu</div>
+                </div>
+              </div>
+              <p class="experience-item__description">Trained students in full stack web development and built the portfolio sites they learned from.</p>
+            </div>
+            <span class="experience-item__type">Full time</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies and interests -->
+    <section id="interests" data-guide-lines aria-labelledby="interestsTitle">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-regular fa-heart"></i>Hobbies and interests</div>
+        <h2 class="section-title section-title--wide reveal" id="interestsTitle">What I enjoy outside of work.</h2>
+
+        <ul class="hobby-grid">
+          <li class="reveal"><div class="hobby-card"><i class="fa-solid fa-hammer"></i><div><h3>Building side projects</h3><p>Turning ideas into working products on evenings and weekends.</p></div></div></li>
+          <li class="reveal"><div class="hobby-card"><i class="fa-solid fa-chalkboard-user"></i><div><h3>Teaching and mentoring</h3><p>Helping new developers get from first lesson to first project.</p></div></div></li>
+          <li class="reveal"><div class="hobby-card"><i class="fa-solid fa-server"></i><div><h3>Self hosting</h3><p>Running my own servers and containers, and tuning them to be fast.</p></div></div></li>
+          <li class="reveal"><div class="hobby-card"><i class="fa-solid fa-puzzle-piece"></i><div><h3>Developer tools</h3><p>Making small tools, like my VS Code extension, that save developers time.</p></div></div></li>
+          <li class="reveal"><div class="hobby-card"><i class="fa-brands fa-youtube"></i><div><h3>Learning on video</h3><p>Watching tutorials and lectures to pick up new languages and ideas.</p></div></div></li>
+          <li class="reveal"><div class="hobby-card"><i class="fa-solid fa-microchip"></i><div><h3>Exploring AI</h3><p>Experimenting with machine learning and the tools built on it.</p></div></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Multimedia -->
+    <section id="video" aria-labelledby="videoTitle" style="padding-top:0">
+      <div class="container">
+        <div class="eyebrow reveal"><i class="fa-solid fa-circle-play"></i>Watch</div>
+        <h2 class="section-title reveal" id="videoTitle">Me in twelve seconds.</h2>
+
+        <figure class="media-card reveal">
+          <video controls preload="metadata" poster="assets/media/intro-poster.jpg">
+            <source src="assets/media/intro.mp4" type="video/mp4">
+            <p>Your browser does not support HTML video. You can <a href="assets/media/intro.mp4">download the video</a> instead.</p>
+          </video>
+          <figcaption>A short reel of who I am and what I build.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <h3 class="site-footer__title">Software built with care.</h3>
+        <div class="social-links">
+          <a href="https://github.com/Augustinechibueze" target="_blank" rel="noopener" aria-label="GitHub" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/augustinechibueze/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link" style="--social-color:#0a66c2"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/Augustine7850" target="_blank" rel="noopener" aria-label="X" class="social-link social-link--neutral" style="--social-color:var(--color-text)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/augustine_chibueze" target="_blank" rel="noopener" aria-label="Instagram" class="social-link" style="--social-color:#e4405f"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/cloudpenide" target="_blank" rel="noopener" aria-label="YouTube" class="social-link" style="--social-color:#ff0000"><i class="fa-brands fa-youtube"></i></a>
+          <a href="mailto:augustinedevv@gmail.com" aria-label="Email" class="social-link" style="--social-color:#ea4335"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Augustine Chibueze. All rights reserved.</span>
+        <span>Computer Science, Miva Open University</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- Reedmi Chat Widget -->
+  <script src="https://backend.reedmi.com/widget/settings" data-widget-key="91e75f10-17d4-4d6a-9b1e-2aee4d558331"></script>
+  <noscript>
+      <div style="padding: 15px; background: #f5f5f5; border-radius: 8px; max-width: 280px;">
+          <p style="margin: 0; color: #666; font-size: 14px;">
+              JavaScript is required for live chat.
+              <a href="mailto:support@reedmi.com" style="color: #0066cc;">Email us instead</a>
+          </p>
+      </div>
+  </noscript>
+  <!-- end code for Reedmi Chat Widget -->
+
+</body>
+
+</html>
